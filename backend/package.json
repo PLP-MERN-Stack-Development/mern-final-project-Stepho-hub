@@ -1,0 +1,59 @@
+{
+  "name": "healthkonnect-backend",
+  "version": "1.0.0",
+  "description": "HealthKonnect backend API",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "mock-test": "npm run test -- --testPathPattern=mock",
+    "seed": "ts-node src/scripts/seed.ts"
+  },
+  "keywords": [
+    "healthcare",
+    "telemedicine",
+    "api",
+    "nodejs"
+  ],
+  "author": "HealthKonnect Team",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^7.0.0",
+    "intasend-node": "^1.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.20.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^4.2.1",
+    "pdfkit": "^0.15.0",
+    "socket.io": "^4.7.0",
+    "twilio": "^5.10.6",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.0",
+    "@types/express": "^4.17.0",
+    "@types/helmet": "^4.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.0.0",
+    "@types/pdfkit": "^0.12.12",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.0",
+    "supertest": "^6.3.0",
+    "ts-jest": "^29.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
